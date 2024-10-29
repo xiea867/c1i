@@ -23,24 +23,28 @@
   </style>
 </head>
 <body>
-  <!-- Top-right GIF -->
+
   <img src="https://i.pinimg.com/originals/52/6a/b5/526ab5f897fe33f195ca51258bf7c19b.gif" class="top-right-gif" alt="Virus GIF">
 
-  <!-- Text content -->
   <h1>YOU HAVE A VIRUS NOW</h1>
   <p>don't believe me?</p>
   <p>check under your foreskin</p>
 
   <script>
-    // Array of rainbow colors
+    // Display a pop-up alert on page load
+    window.onload = function() {
+      alert("Malware has now been installed to your computer.");
+    };
+
+   
     const colors = ["#FF0000", "#FF7F00", "#FFFF00", "#00FF00", "#0000FF", "#4B0082", "#8B00FF"];
     let colorIndex = 0;
 
-    // Function to change background color every second
+    
     setInterval(() => {
       document.body.style.backgroundColor = colors[colorIndex];
-      colorIndex = (colorIndex + 1) % colors.length; // Loop back to the start
-    }, 1000); // Change color every second
+      colorIndex = (colorIndex + 1) % colors.length; 
+    }, 1000); 
   </script>
 </body>
 </html>
