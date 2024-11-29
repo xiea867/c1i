@@ -7,35 +7,72 @@
       background: linear-gradient(45deg, #ff00ff, #00ffff);
       color: white;
       text-align: center;
-      margin-top: 20%;
+      margin-top: 10%;
+      padding: 0;
+      margin: 0;
+    }
+    h1 {
+      font-size: 50px;
+      color: #ff0000;
+      text-shadow: 3px 3px 5px black;
+    }
+    p {
+      font-size: 20px;
+      color: #fff;
+      text-shadow: 2px 2px 5px red;
     }
     button {
-      font-size: 20px;
-      padding: 20px;
+      font-size: 30px;
+      padding: 30px;
       background-color: #000000;
-      color: white;
-      border: none;
+      color: red;
+      border: 2px solid #ff0000;
       cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
     }
     button:hover {
-      background-color: #ff00ff;
+      background-color: #ff0000;
+      color: white;
+      box-shadow: 0 0 30px rgba(255, 0, 0, 1);
+    }
+    button:active {
+      transform: scale(0.98);
+    }
+    .gif-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .dancer {
+      width: 100%;
+      max-width: 200px;
+    }
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 16px;
+      }
+      button {
+        font-size: 18px;
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>WARNING: FAKE VIRUS ALERT!</h1>
-  <p>Your system is at risk! Click the button below to exit.</p>
-  <button onclick="window.close()">Click 2 Exit</button>
+  <div class="gif-container">
+    <img src="error gif.gif" class="dancer" alt="Error GIF">
+  </div>
+  <h1>WARNING: SYSTEM OVERLOAD!</h1>
+  <p>Your files are at risk! Click the button below to exit.</p>
+  <button onclick="closeWindow()">Click 2 Exit</button>
 
   <script>
-    if (window.history.length > 1) {
-      document.querySelector("button").onclick = function() {
-        window.close();
-      };
-    } else {
-      document.querySelector("button").onclick = function() {
-        alert("You can't close this tab directly. Try closing the tab manually.");
-      };
+    function closeWindow() {
+      window.open('', '_self').close();
     }
   </script>
 </body>
