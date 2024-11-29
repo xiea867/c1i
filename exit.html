@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+      background: linear-gradient(45deg, #ff00ff, #00ffff);
+      color: white;
+      text-align: center;
+      margin-top: 20%;
+    }
+    button {
+      font-size: 20px;
+      padding: 20px;
+      background-color: #000000;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff00ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>WARNING: FAKE VIRUS ALERT!</h1>
+  <p>Your system is at risk! Click the button below to exit.</p>
+  <button onclick="window.close()">Click 2 Exit</button>
+
+  <script>
+    if (window.history.length > 1) {
+      document.querySelector("button").onclick = function() {
+        window.close();
+      };
+    } else {
+      document.querySelector("button").onclick = function() {
+        alert("You can't close this tab directly. Try closing the tab manually.");
+      };
+    }
+  </script>
+</body>
+</html>
